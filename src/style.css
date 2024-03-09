@@ -1,0 +1,50 @@
+.carousel {
+  border: 2px solid red;
+  width: 90%;
+  margin: 0 auto;
+  height: 300px;
+  display: flex;
+  /* important property */
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  /* snap scroll this */
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 1rem;
+  scroll-behavior: smooth;
+  overscroll-behavior: inline contain;
+}
+.dragging{
+  user-select: none;
+  cursor: grab;
+}
+/* .carousel::-webkit-scrollbar {
+  display: none;
+} */
+
+.box {
+  text-align: center;
+  border-radius: 24px;
+  margin: 1rem;
+  background-color: rgb(40, 40, 214);
+  flex-shrink: 0; /* my elements shrink so to avoid it, i've used flex shrink */
+  width: 300px;
+  height: 250px;
+  color: white;
+  /* snap this div */
+  scroll-snap-align: start;
+  box-shadow: 4px 14px 25px -6px black;
+}
+
+.left{
+  position: absolute;
+  background-color: red;
+  
+}
+.right{
+  font-size: 23px;
+  user-select: none;
+  position: absolute;
+  background-color: red;
+  right: 4rem 
+}
